@@ -1,4 +1,4 @@
-{% set version = '1.2.3' %}
+{% set version = "1.2.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BoomSpikeSlab_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BoomSpikeSlab/BoomSpikeSlab_{{ version }}.tar.gz
-  sha256: 393e696ed7f1288b5e86db9e712c5636b8036949baeee063c02117157c896945
+  sha256: e601eef3baf4ef11ee08c46087cffd1fc18c9088c7a237d63cfa1de72417b206
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -46,17 +46,12 @@ test:
 about:
   home: https://CRAN.R-project.org/package=BoomSpikeSlab
   license: LGPL-2.1-only
-  summary: Spike and slab regression with a variety of residual error distributions corresponding
-    to Gaussian, Student T, probit, logit, SVM, and a few others.  Spike and slab regression
-    is Bayesian regression with prior distributions containing a point mass at zero.  The
-    posterior updates the amount of mass on this point, leading to a posterior distribution
-    that is actually sparse, in the sense that if you sample from it many coefficients
-    are actually zeros.  Sampling from this posterior distribution is an elegant way
-    to handle Bayesian variable selection and model averaging.  See <DOI:10.1504/IJMMNO.2014.059942>
-    for an explanation of the Gaussian case.
+  summary: Spike and slab regression with a variety of residual error distributions corresponding to Gaussian, Student T, probit, logit, SVM, and a few others.  Spike and slab regression is Bayesian regression with prior distributions containing a point mass at zero.  The posterior updates the amount of mass on this point,
+    leading to a posterior distribution that is actually sparse, in the sense that if you sample from it many coefficients are actually zeros.  Sampling from this posterior distribution is an elegant way to handle Bayesian variable selection and model averaging.  See <DOI:10.1504/IJMMNO.2014.059942> for an explanation of
+    the Gaussian case.
   license_family: LGPL
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1
     - LICENSE
 
 extra:
