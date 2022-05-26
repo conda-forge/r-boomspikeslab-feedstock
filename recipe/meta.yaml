@@ -1,4 +1,4 @@
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BoomSpikeSlab_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BoomSpikeSlab/BoomSpikeSlab_{{ version }}.tar.gz
-  sha256: e601eef3baf4ef11ee08c46087cffd1fc18c9088c7a237d63cfa1de72417b206
+  sha256: bc88ad95075b91799476e9e56281e4bf421106601acdbee5de783c9048b22bf8
 
 build:
   merge_build_host: true  # [win]
