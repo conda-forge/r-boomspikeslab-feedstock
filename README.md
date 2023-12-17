@@ -3,6 +3,7 @@ About r-boomspikeslab-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-boomspikeslab-feedstock/blob/main/LICENSE.txt)
 
+
 About r-boomspikeslab
 ---------------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=BoomSpikeSlab
 Package license: LGPL-2.1-only
 
 Summary: Spike and slab regression with a variety of residual error distributions corresponding to Gaussian, Student T, probit, logit, SVM, and a few others.  Spike and slab regression is Bayesian regression with prior distributions containing a point mass at zero.  The posterior updates the amount of mass on this point, leading to a posterior distribution that is actually sparse, in the sense that if you sample from it many coefficients are actually zeros.  Sampling from this posterior distribution is an elegant way to handle Bayesian variable selection and model averaging.  See <DOI:10.1504/IJMMNO.2014.059942> for an explanation of the Gaussian case.
+
 About r-boomspikeslab
 ---------------------
 
@@ -146,7 +148,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
