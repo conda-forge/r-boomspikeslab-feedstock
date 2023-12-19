@@ -33,11 +33,11 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-boom >=0.9.8
+    - r-boom >=0.9.13
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-boom >=0.9.8
+    - r-boom >=0.9.13
 
 test:
   commands:
