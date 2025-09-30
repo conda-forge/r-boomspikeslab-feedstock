@@ -16,6 +16,7 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  skip: true  # [r_base == "4.4"]
   missing_dso_whitelist:
     - '*/R.dll'        # [win]
     - '*/Rblas.dll'    # [win]
@@ -35,10 +36,10 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
   host:
-    - r-base >=4.5.0
+    - r-base
     - r-boom >=0.9.16
   run:
-    - r-base >=4.5.0
+    - r-base
     - r-boom >=0.9.16
 
 test:
