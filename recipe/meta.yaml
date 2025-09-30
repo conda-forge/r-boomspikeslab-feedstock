@@ -12,12 +12,14 @@ source:
   sha256: 086de6b5622e4230825fad0a6d83617c5bc63ed995ab323141041eeafda7bb74
 
 build:
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -33,11 +35,11 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
   host:
-    - r-base
-    - r-boom >=0.9.13
+    - r-base >=4.5.0
+    - r-boom >=0.9.16
   run:
-    - r-base
-    - r-boom >=0.9.13
+    - r-base >=4.5.0
+    - r-boom >=0.9.16
 
 test:
   commands:
