@@ -12,7 +12,7 @@ source:
   sha256: 086de6b5622e4230825fad0a6d83617c5bc63ed995ab323141041eeafda7bb74
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -32,9 +32,11 @@ requirements:
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
-    - {{ posix }}sed               # [win]
+    - {{ posix }}sed
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base                 # [build_platform != target_platform]
+    - r-boom >=0.9.13              # [build_platform != target_platform]
   host:
     - r-base
     - r-boom >=0.9.16
